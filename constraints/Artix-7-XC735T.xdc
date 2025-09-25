@@ -11,7 +11,7 @@ set_property -dict {PACKAGE_PIN R4 IOSTANDARD DIFF_SSTL15} [get_ports sys_clk_20
 set_property -dict {PACKAGE_PIN R14 IOSTANDARD LVCMOS33} [get_ports reset_sw_n]
 
 # Reset
-set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33 PULLDOWN TRUE} [get_ports reset_sw_n]
+set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports reset_sw_n]
 
 # pwm to leds (GPIO)
 set_property -dict {PACKAGE_PIN G17 IOSTANDARD LVCMOS33} [get_ports {led0_pwm_r}]
