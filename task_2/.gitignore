@@ -1,0 +1,6 @@
+# Project directory ignored
+project/
+
+# Any Vivado-related files
+xv*
+vivado*

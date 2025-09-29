@@ -59,7 +59,7 @@ module alu_top #(
     alu_mux alu_mux_i
     (
         .num_1({sw1, 4'b0}),
-        .num_2({sw2, 4'b0}),
+        .num_2({4'b0,  sw2}),
         .op_select(op_sw),
         .alu_result(mux_op_result)
     );
