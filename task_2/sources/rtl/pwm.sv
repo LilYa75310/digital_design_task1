@@ -27,20 +27,24 @@ module pwm #(
     always_ff @(posedge clk_i or negedge reset_ni) begin : counter
         if(!reset_ni) begin
             counter_o <= '0;
-        end else if(!enable_ni) begin
-            counter_o <= period_i - 1;
-        end else if(counter_o >= period_i - 1) begin
-            counter_o <= '0;
         end else begin
-            counter_o <= counter_o + 1'b1;
+            if(!enable_ni) begin
+                counter_o <= period_i - 1;
+            end else if(counter_o >= period_i - 1) begin
+                counter_o <= '0;
+            end else begin
+                counter_o <= counter_o + 1'b1;
+            end
         end
     end
 
     always_ff @(posedge clk_i or negedge reset_ni) begin
         if(!reset_ni) begin
             duty_current_q <= '0;
-        end else if(counter_o == period_i - 1) begin
-            duty_current_q <=  duty_current_d;
+        end else begin 
+            if(counter_o == period_i - 1) begin
+                duty_current_q <=  duty_current_d;
+            end
         end
     end
     

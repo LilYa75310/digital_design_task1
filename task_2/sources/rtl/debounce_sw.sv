@@ -32,10 +32,12 @@ module debounce_sw #(
     always_ff @(posedge clk_i or negedge reset_ni) begin : counter_of_stable_cycles
         if(!reset_ni) begin
             counter <= '0;
-        end else if(changed_sign_flag || counter_max_flag) begin
-            counter <= '0;
         end else begin
+            if(changed_sign_flag || counter_max_flag) begin
+               counter <= '0;
+            end else begin
             counter <= counter + 1'b1;
+            end
         end
     end
 
@@ -44,10 +46,12 @@ module debounce_sw #(
     always_ff @(posedge clk_i or negedge reset_ni) begin : output_buffer
         if(!reset_ni) begin
             sync_buff_output <= '0;
-        end else if(counter_max_flag == 1'b1) begin
-            sync_buff_output <= sync_buff[1];
+        end else begin
+            if(counter_max_flag == 1'b1) begin
+                sync_buff_output <= sync_buff[1];
+            end
         end
-    end
+    end    
     
     assign debounced_o = sync_buff_output;
 
