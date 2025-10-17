@@ -12,7 +12,8 @@ module driver #(
     output sda_out,
     input  sda_in,
     output sda_out_en,
-    output seg_scl_o
+    output seg_scl_o,
+    output ack_error_o
 );
 
 typedef enum logic [2:0] {
@@ -135,7 +136,7 @@ i2c_simple_master i2c_simple_master_u(
     .num_bytes(seg_byte_num),
     .busy(seg_busy),
     .done(seg_done),
-    .ack_error(),
+    .ack_error(ack_error_o),
     .sda_out(sda_out),
     .sda_in(sda_in),
     .sda_out_en(sda_out_en),

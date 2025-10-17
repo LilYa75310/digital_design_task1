@@ -17,6 +17,8 @@ set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports 
 set_property -dict {PACKAGE_PIN K22 IOSTANDARD LVCMOS33} [get_ports seg_scl_o]
 set_property -dict {PACKAGE_PIN J22 IOSTANDARD LVCMOS33} [get_ports sda_io]
 
+#ACK
+set_property -dict {PACKAGE_PIN M18 IOSTANDARD LVCMOS33} [get_ports ack_error_o]
 # кнопки sw1 (GPIO)
 #set_property -dict {PACKAGE_PIN N22 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports sw1_up]
 #set_property -dict {PACKAGE_PIN M22 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports sw1_down]
