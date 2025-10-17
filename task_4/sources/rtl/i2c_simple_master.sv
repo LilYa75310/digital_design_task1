@@ -134,13 +134,13 @@ module i2c_simple_master #(
                 SEND_BIT_LOW: begin
                     scl_int    <= 0;
                     sda_out_en <= 1;
-                    sda_out_val<= shift_reg[0]; // LSB first
+                    sda_out_val<= shift_reg[7]; // LSB first
                 end
 
                 SEND_BIT_HIGH: begin
                     scl_int <= 1;
                     // Keep SDA stable
-                    shift_reg <= {1'b0, shift_reg[7:1]};
+                    shift_reg <= {shift_reg[6:0], 1'b0};
                     bit_cnt <= bit_cnt + 1;
                 end
 
