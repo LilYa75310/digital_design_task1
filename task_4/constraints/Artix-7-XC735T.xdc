@@ -13,12 +13,17 @@ set_property -dict {PACKAGE_PIN R4 IOSTANDARD DIFF_SSTL15} [get_ports sys_clk_20
 # set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports reset_sw_n]
 set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports porb_i]
 
+#sycn_reset
+set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33 PULLDOWN TRUE} [get_ports sync_reset_i]
+
 # I2C sda, scl
 set_property -dict {PACKAGE_PIN K22 IOSTANDARD LVCMOS33} [get_ports seg_scl_o]
 set_property -dict {PACKAGE_PIN J22 IOSTANDARD LVCMOS33} [get_ports sda_io]
 
 #ACK
 set_property -dict {PACKAGE_PIN M18 IOSTANDARD LVCMOS33} [get_ports ack_error_o]
+
+
 # кнопки sw1 (GPIO)
 #set_property -dict {PACKAGE_PIN N22 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports sw1_up]
 #set_property -dict {PACKAGE_PIN M22 IOSTANDARD LVCMOS33 PULLUP TRUE} [get_ports sw1_down]

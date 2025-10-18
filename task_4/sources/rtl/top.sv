@@ -25,7 +25,7 @@ module top(
    input  sys_clk_200_p,
    input  sys_clk_200_n,
    input  porb_i,
-   //input  sync_reset_i,
+   input  sync_reset_i,
    inout  sda_io,
    //output sda_out_en,
    output seg_scl_o,
@@ -44,6 +44,7 @@ logic [7:0] digits [3:0];
 logic disp_strobe;
 //logic sda_out, sda_in;
 //logic sda_out_en;
+logic sync_reset_debounced;
 
 clk_wiz_0 clknetwork
    (
@@ -56,14 +57,17 @@ clk_wiz_0 clknetwork
        .clk_in1_n(sys_clk_200_n)    // input clk_in1_n
    );
 
-// FSM state FF
 always_ff @(negedge porb_i, posedge clk_i ) begin : state_ff
-   if(!porb_i)begin
-       fsm_state_ff <= IDLE;
-   end else begin
-       fsm_state_ff <= fsm_next;
-   end
-end 
+    if(!porb_i)begin
+    fsm_state_ff <= IDLE;
+    end else if (clk_i) begin
+        if(sync_reset_debounced) begin
+            fsm_state_ff <= IDLE;
+        end else begin
+            fsm_state_ff <= fsm_next;
+        end
+    end 
+end
 
 
 // State transitioning logic
@@ -82,18 +86,18 @@ always_comb begin : next_state
        SEND_NUMBER:
            begin
                disp_strobe = 1'b1;
-               digits[0] = `_2;
+               digits[0] = `_0;
                digits[1] = `_0;
-               digits[2] = `_2;
-               digits[3] = `_5;
+               digits[2] = `_0;
+               digits[3] = `_0;
                fsm_next = WAIT;
            end
        WAIT:
            begin
-               digits[0] = `_2;
+               digits[0] = `_0;
                digits[1] = `_0;
-               digits[2] = `_2;
-               digits[3] = `_5;
+               digits[2] = `_0;
+               digits[3] = `_0;
                if (!busy) begin
                    fsm_next = DONE;
                end
@@ -113,8 +117,8 @@ driver_u
 (
    .clk_i(clk_i),
    .porb_i(porb_i),
-   //.sync_reset_i(sync_reset_i),
-   .sync_reset_i(1'b0),
+   .sync_reset_i(sync_reset_debounced),
+   //.sync_reset_i(1'b0),
    .digits_i(digits),
    .disp_strobe_i(disp_strobe),
    .busy_o(busy),
@@ -127,6 +131,15 @@ driver_u
 
 assign sda_in = sda_io;
 assign sda_io = (!sda_out_en || sda_out) ? 'Z : '0;
+
+debounce_sw #(
+                .CLOCK_FREQ(10_000_000)
+            ) debounce_sw_inst_i (
+                .clk_i(clk_i),
+                .reset_ni(porb_i),
+                .switch_btn_i(sync_reset_i),
+                .debounced_o(sync_reset_debounced)
+            );
 
 endmodule
 
