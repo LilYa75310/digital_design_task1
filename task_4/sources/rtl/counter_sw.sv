@@ -1,7 +1,7 @@
 module counter_sw #(
     parameter WIDTH_COUNTER = 8,
-    parameter STEP = 10,
-    parameter REPEAT_DELAY = 20_000_000,
+    parameter STEP = 1,
+    parameter REPEAT_DELAY = 15_000_000,
     parameter REPEAT_RATE = 5_000_000)
 (
     input logic clk_i,

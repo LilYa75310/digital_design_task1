@@ -128,7 +128,9 @@ end
 
 assign busy_o = busy; 
 
-i2c_simple_master i2c_simple_master_u(
+i2c_simple_master #(
+    .CLOCK_DIVIDER(CLK_DIV)
+) i2c_simple_master_u (
     .clk(clk_i),
     .rst_n(porb_i),
     .start(seg_start),
