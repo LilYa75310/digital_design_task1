@@ -42,7 +42,7 @@ module display #(
     logic start_tx;
     logic [7:0] digits [3:0];
     logic [7:0] digits_ff [3:0];
-    logic [15:0] done_cnt;(2^10 = 1024)
+    logic [15:0] done_cnt;
     logic done_cnt_done;
     
     assign start_tx = 1'b1;

@@ -120,31 +120,31 @@ module alu_top #(
     always_comb begin
         case (num_select_d)
             3'b001: begin
-                data_disp[3] = counter_1[3:0];
-                data_disp[2] = counter_1[7:4];
+                data_disp[3] = counter_1[7:4];
+                data_disp[2] = counter_1[3:0];
                 data_disp[1] = '0;
                 data_disp[0] = '0;
             end
 
             3'b010: begin
-                data_disp[3] = counter_2[3:0];
-                data_disp[2] = counter_2[7:4];
+                data_disp[3] = counter_1[7:4];
+                data_disp[2] = counter_1[3:0];
                 data_disp[1] = '0;
                 data_disp[0] = '0;
             end
 
             3'b100: begin
-                data_disp[3] = mux_output[3:0];
-                data_disp[2] = mux_output[7:4];
-                data_disp[1] = mux_output[11:8];
-                data_disp[0] = mux_output[15:12];
+                data_disp[3] = mux_output[15:12];
+                data_disp[2] = mux_output[11:8];
+                data_disp[1] = mux_output[7:4];
+                data_disp[0] = mux_output[3:0];
             end
 
             default: begin
-                data_disp[3] = mux_output[3:0];
-                data_disp[2] = mux_output[7:4];
-                data_disp[1] = mux_output[11:8];
-                data_disp[0] = mux_output[15:12];
+                data_disp[3] = mux_output[15:12];
+                data_disp[2] = mux_output[11:8];
+                data_disp[1] = mux_output[7:4];
+                data_disp[0] = mux_output[3:0];
             end
         endcase
     end
