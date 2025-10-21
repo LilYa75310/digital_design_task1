@@ -25,7 +25,7 @@ module display #(
 )(
     input  clk_i,
     input  porb_i,
-    input  [3:0][3:0]data_disp,
+    input  [15:0]data_disp,
     inout  sda_io,
     output seg_scl_o
 );
@@ -42,15 +42,17 @@ module display #(
     logic start_tx;
     logic [7:0] digits [3:0];
     logic [7:0] digits_ff [3:0];
+    logic [3:0] bcd_digits [3:0];
     logic [15:0] done_cnt;
     logic done_cnt_done;
-    
+    logic start_convrt;
+    logic done_convrt;
     assign start_tx = 1'b1;
-    
+
     generate
         for (genvar i = 0; i < 4; i++) begin
             always_comb begin
-                case (data_disp[i])
+                case (bcd_digits[i])
                     4'h0: digits[i] = `_0;
                     4'h1: digits[i] = `_1;
                     4'h2: digits[i] = `_2;
@@ -72,7 +74,7 @@ module display #(
         end
     endgenerate
     
-    
+    assign start_convrt = fsm_state_ff == IDLE;
     always_ff @(negedge porb_i, posedge clk_i ) begin : state_ff
         if(!porb_i)begin
             fsm_state_ff <= IDLE;
@@ -86,8 +88,7 @@ module display #(
     
         case (fsm_state_ff)
             IDLE: 
-                if (start_tx) begin
-                    
+                if (start_tx && done_convrt) begin
                     fsm_next = TX;
                 end else begin
                     fsm_next = IDLE;
@@ -113,28 +114,30 @@ module display #(
             end
             disp_strobe <= 1'b0;
         end else begin
+            
+            
             case (fsm_next)
+                IDLE: begin
+                    disp_strobe <= 1'b0;
+                end
                 TX: begin
                     disp_strobe <= 1'b1;
                     digits_ff[0] <= digits[0];
                     digits_ff[1] <= digits[1];
                     digits_ff[2] <= digits[2];
                     digits_ff[3] <= digits[3];
-                    // digits_ff[0] <= 8'h7f;
-                    // digits_ff[1] <= 8'h7f;
-                    // digits_ff[2] <= 8'h7f;
-                    // digits_ff[3] <= 8'h7f;
                     // for(int i = 0; i<4; i++) begin
                     //     digits_ff[i] <= digits[i];
                     // end   
                 end
-                IDLE: disp_strobe <= 1'b0;
-                DONE: disp_strobe <= 1'b0;
+                DONE: begin
+                    disp_strobe <= 1'b0;
+                end
             endcase
             
         end 
     end
-    
+
     always_ff @(negedge porb_i, posedge clk_i) begin
         if(!porb_i) begin
             done_cnt <= '0;
@@ -149,6 +152,16 @@ module display #(
     
     assign done_cnt_done = (done_cnt == 12'd4000);
     
+    bin_to_dec bin_to_dec_u 
+    (
+        .clk_i(clk_i),
+        .reset_ni(porb_i),
+        .start(start_convrt),
+        .bin_data(data_disp),
+        .bcd_digits(bcd_digits),
+        .done(done_convrt)
+    );
+
     driver #(
        .CLK_DIV(DISPLAY_CLK_DIV)
     )

@@ -37,7 +37,7 @@ module alu_top #(
     logic sw2_down_d, sw2_up_d, sw1_down_d, sw1_up_d;
     logic [2:0] op_sw_d;
     logic [2:0] num_select_d;
-    logic [3:0][3:0]data_disp;
+    logic [15:0]data_disp;
 
     // alias op_sw_d     = switches_debounced[4];
     // alias sw2_down_d  = switches_debounced[3];
@@ -120,31 +120,19 @@ module alu_top #(
     always_comb begin
         case (num_select_d)
             3'b001: begin
-                data_disp[3] = counter_1[7:4];
-                data_disp[2] = counter_1[3:0];
-                data_disp[1] = '0;
-                data_disp[0] = '0;
+                data_disp = {8'd0000_0000, counter_1[7:0]};
             end
 
             3'b010: begin
-                data_disp[3] = counter_1[7:4];
-                data_disp[2] = counter_1[3:0];
-                data_disp[1] = '0;
-                data_disp[0] = '0;
+                data_disp = {8'd0000_0000, counter_2[7:0]};
             end
 
             3'b100: begin
-                data_disp[3] = mux_output[15:12];
-                data_disp[2] = mux_output[11:8];
-                data_disp[1] = mux_output[7:4];
-                data_disp[0] = mux_output[3:0];
+                data_disp = mux_output[15:0];
             end
 
             default: begin
-                data_disp[3] = mux_output[15:12];
-                data_disp[2] = mux_output[11:8];
-                data_disp[1] = mux_output[7:4];
-                data_disp[0] = mux_output[3:0];
+                data_disp = mux_output[15:0];
             end
         endcase
     end
