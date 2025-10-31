@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Oct 31 00:16:53 2025
+# Process ID         : 14628
+# Current directory  : C:/Users/lilya/Documents/ds3_task/task_5/project/task_5_ULTRA_PROCESSOR.runs/Super_Ultra_Processor_dlmb_v10_0_synth_1
+# Command line       : vivado.exe -log Super_Ultra_Processor_dlmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Super_Ultra_Processor_dlmb_v10_0.tcl
+# Log file           : C:/Users/lilya/Documents/ds3_task/task_5/project/task_5_ULTRA_PROCESSOR.runs/Super_Ultra_Processor_dlmb_v10_0_synth_1/Super_Ultra_Processor_dlmb_v10_0.vds
+# Journal file       : C:/Users/lilya/Documents/ds3_task/task_5/project/task_5_ULTRA_PROCESSOR.runs/Super_Ultra_Processor_dlmb_v10_0_synth_1\vivado.jou
+# Running On         : DESKTOP-8J48ADF
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
+# CPU Frequency      : 3408 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 17109 MB
+# Swap memory        : 13562 MB
+# Total Virtual      : 30671 MB
+# Available Virtual  : 6187 MB
+#-----------------------------------------------------------
+source Super_Ultra_Processor_dlmb_v10_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 504.230 ; gain = 211.383
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP Super_Ultra_Processor_dlmb_v10_0, cache-ID = 1c5932d995794a8d.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 31 00:17:15 2025...

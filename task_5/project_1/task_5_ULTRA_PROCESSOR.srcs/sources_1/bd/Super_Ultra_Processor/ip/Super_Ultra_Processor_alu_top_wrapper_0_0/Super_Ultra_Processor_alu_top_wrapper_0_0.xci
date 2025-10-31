@@ -1,0 +1,78 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "Super_Ultra_Processor_alu_top_wrapper_0_0",
+    "cell_name": "alu_top_wrapper_0",
+    "component_reference": "xilinx.com:module_ref:alu_top_wrapper:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../task_5_ULTRA_PROCESSOR.gen/sources_1/bd/Super_Ultra_Processor/ip/Super_Ultra_Processor_alu_top_wrapper_0_0",
+    "parameters": {
+      "component_parameters": {
+        "WIDTH_REGISTERS": [ { "value": "8", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "WIDTH_MUX": [ { "value": "16", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "PERIOD_BIT_PWM": [ { "value": "12", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DUTY_WIDTH_PWM": [ { "value": "8", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DISPLAY_CLK_DIV": [ { "value": "1000", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "Super_Ultra_Processor_alu_top_wrapper_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "WIDTH_REGISTERS": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "WIDTH_MUX": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "PERIOD_BIT_PWM": [ { "value": "12", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DUTY_WIDTH_PWM": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DISPLAY_CLK_DIV": [ { "value": "1000", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a35t" } ],
+        "PACKAGE": [ { "value": "fgg484" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../task_5_ULTRA_PROCESSOR.gen/sources_1/bd/Super_Ultra_Processor/ip/Super_Ultra_Processor_alu_top_wrapper_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "sys_clk_i": [ { "direction": "in" } ],
+        "reset_sw_n": [ { "direction": "in" } ],
+        "reg_gpio1": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "reg_gpio2": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "op_sw": [ { "direction": "in", "size_left": "2", "size_right": "0" } ],
+        "num_select": [ { "direction": "in", "size_left": "2", "size_right": "0" } ],
+        "sda_in": [ { "direction": "in" } ],
+        "sda_out_en": [ { "direction": "out" } ],
+        "sda_out": [ { "direction": "out" } ],
+        "seg_scl_o": [ { "direction": "out" } ]
+      },
+      "interfaces": {
+        "reset_sw_n": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "reset_sw_n" } ]
+          }
+        }
+      }
+    }
+  }
+}

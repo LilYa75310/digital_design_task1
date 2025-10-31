@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1761863382" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Super_Ultra_Processor_wrapper.dcp">
+  <File Type="PA-TCL" Name="Super_Ultra_Processor_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="Super_Ultra_Processor_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Super_Ultra_Processor_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="Super_Ultra_Processor_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="Super_Ultra_Processor_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Super_Ultra_Processor_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Super_Ultra_Processor_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Super_Ultra_Processor_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Super_Ultra_Processor_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../sources/rtl/alu_mux.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/alu_top.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/bin_to_dec.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/driver.svh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/display.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/driver.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/i2c_simple_master.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/alu_top_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Super_Ultra_Processor/Super_Ultra_Processor.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Super_Ultra_Processor_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/Super_Ultra_Processor/hdl/Super_Ultra_Processor_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1761862174"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/counter_sw.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/debounce_sw.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sources/rtl/pwm.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Super_Ultra_Processor_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../constraints/Artix-7-XC735T.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Super_Ultra_Processor_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_microblaze_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_alu_top_wrapper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Super_Ultra_Processor_dlmb_v10_0"/>
+</GenRun>

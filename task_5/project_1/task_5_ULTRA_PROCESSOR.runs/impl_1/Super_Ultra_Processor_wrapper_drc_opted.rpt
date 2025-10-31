@@ -1,0 +1,41 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Fri Oct 31 00:32:10 2025
+| Host         : DESKTOP-8J48ADF running 64-bit major release  (build 9200)
+| Command      : report_drc -file Super_Ultra_Processor_wrapper_drc_opted.rpt -pb Super_Ultra_Processor_wrapper_drc_opted.pb -rpx Super_Ultra_Processor_wrapper_drc_opted.rpx
+| Design       : Super_Ultra_Processor_wrapper
+| Device       : xc7a35tfgg484-2
+| Speed File   : -2
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 1
++--------+----------+--------------------------+--------+
+| Rule   | Severity | Description              | Checks |
++--------+----------+--------------------------+--------+
+| BUFC-1 | Warning  | Input Buffer Connections | 1      |
++--------+----------+--------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer sda_io_0_IOBUF_inst/IBUF (in sda_io_0_IOBUF_inst macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+
