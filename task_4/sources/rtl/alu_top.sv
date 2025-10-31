@@ -8,7 +8,7 @@ module alu_top #(
     parameter STEP_COUNTER = 1,
     parameter PERIOD_BIT_PWM = 12,
     parameter DUTY_WIDTH_PWM = 8,
-    parameter DISPLAY_CLK_DIV = 1000
+    parameter DISPLAY_CLK_DIV = 2500
     ) 
 (  
     // input Clock & Reset
