@@ -1,0 +1,4 @@
+domain_path: C:\Users\lilya\Documents\vitis_projects\Super_Ultra_Processor\export\Super_Ultra_Processor\sw\standalone_microblaze_0
+app_src_dir: E:\Xilinx\2025.1\Vitis\data\embeddedsw\lib\sw_apps\hello_world
+template: hello_world
+lang: c
