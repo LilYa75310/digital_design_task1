@@ -1,0 +1,44 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.822581",
+   "Default View_TopLeft":"-1018,-18",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_reset_sw_n_0 -pg 1 -lvl 0 -x -850 -y 190 -defaultsOSRD
+preplace port port-id_sda_in_0 -pg 1 -lvl 0 -x -850 -y 350 -defaultsOSRD
+preplace port port-id_sda_out_0 -pg 1 -lvl 3 -x 330 -y 280 -defaultsOSRD
+preplace port port-id_sda_out_en_0 -pg 1 -lvl 3 -x 330 -y 260 -defaultsOSRD
+preplace port port-id_seg_scl_o_0 -pg 1 -lvl 3 -x 330 -y 300 -defaultsOSRD
+preplace port port-id_sw1_down_0 -pg 1 -lvl 0 -x -850 -y 230 -defaultsOSRD
+preplace port port-id_sw1_up_0 -pg 1 -lvl 0 -x -850 -y 210 -defaultsOSRD
+preplace port port-id_sw2_down_0 -pg 1 -lvl 0 -x -850 -y 270 -defaultsOSRD
+preplace port port-id_sw2_up_0 -pg 1 -lvl 0 -x -850 -y 250 -defaultsOSRD
+preplace port port-id_sys_clk_200_n_0 -pg 1 -lvl 0 -x -850 -y 170 -defaultsOSRD
+preplace port port-id_sys_clk_200_p_0 -pg 1 -lvl 0 -x -850 -y 150 -defaultsOSRD
+preplace portBus num_select_0 -pg 1 -lvl 0 -x -850 -y 310 -defaultsOSRD
+preplace portBus op_sw_0 -pg 1 -lvl 0 -x -850 -y 290 -defaultsOSRD
+preplace inst alu_top_wrapper_0 -pg 1 -lvl 2 -x 140 -y 250 -defaultsOSRD
+preplace inst dsp_macro_0 -pg 1 -lvl 1 -x -120 -y 440 -defaultsOSRD
+preplace netloc dsp_macro_0_P 1 1 1 -30 330n
+preplace netloc alu_top_wrapper_0_clk_100 1 0 3 -230 70 NJ 70 300
+preplace netloc alu_top_wrapper_0_num_2 1 0 3 -210 90 NJ 90 290
+preplace netloc alu_top_wrapper_0_num_1 1 0 3 -220 80 NJ 80 280
+preplace netloc num_select_0_1 1 0 2 NJ 310 NJ
+preplace netloc op_sw_0_1 1 0 2 NJ 290 NJ
+preplace netloc reset_sw_n_0_1 1 0 2 NJ 190 NJ
+preplace netloc sda_in_0_1 1 0 2 NJ 350 NJ
+preplace netloc alu_top_wrapper_0_sda_out 1 2 1 NJ 280
+preplace netloc alu_top_wrapper_0_sda_out_en 1 2 1 NJ 260
+preplace netloc alu_top_wrapper_0_seg_scl_o 1 2 1 NJ 300
+preplace netloc sw1_down_0_1 1 0 2 NJ 230 NJ
+preplace netloc sw1_up_0_1 1 0 2 NJ 210 NJ
+preplace netloc sw2_down_0_1 1 0 2 NJ 270 NJ
+preplace netloc sw2_up_0_1 1 0 2 NJ 250 NJ
+preplace netloc sys_clk_200_n_0_1 1 0 2 NJ 170 NJ
+preplace netloc sys_clk_200_p_0_1 1 0 2 NJ 150 NJ
+levelinfo -pg 1 -850 -120 140 330
+pagesize -pg 1 -db -bbox -sgen -1020 -120 470 750
+"
+}
+

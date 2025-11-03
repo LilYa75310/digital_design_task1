@@ -1,0 +1,354 @@
+
+*** Running vivado
+    with args -log design_dsp_alu_top_wrapper_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dsp_alu_top_wrapper_0_0.tcl
+
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Mon Nov  3 14:31:56 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_dsp_alu_top_wrapper_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 503.691 ; gain = 211.496
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/2025.1/Vivado/data/ip'.
+Command: synth_design -top design_dsp_alu_top_wrapper_0_0 -part xc7a35tfgg484-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1628
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1197.695 ; gain = 493.422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'ack_error_o', assumed default net type 'wire' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/display.sv:183]
+INFO: [Synth 8-6157] synthesizing module 'design_dsp_alu_top_wrapper_0_0' [c:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.gen/sources_1/bd/design_dsp/ip/design_dsp_alu_top_wrapper_0_0/synth/design_dsp_alu_top_wrapper_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'alu_top_wrapper' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/alu_top_wrapper.v:3]
+	Parameter WIDTH_COUNTER_DEBOUNCE bound to: 24 - type: integer 
+	Parameter CLOCK_FREQ_DEBOUNCE bound to: 10000000 - type: integer 
+	Parameter STABLE_TIME_MS_DEBOUNCE bound to: 20 - type: integer 
+	Parameter WIDTH_COUNTER bound to: 8 - type: integer 
+	Parameter WIDTH_MUX bound to: 16 - type: integer 
+	Parameter STEP_COUNTER bound to: 1 - type: integer 
+	Parameter PERIOD_BIT_PWM bound to: 12 - type: integer 
+	Parameter DUTY_WIDTH_PWM bound to: 8 - type: integer 
+	Parameter DISPLAY_CLK_DIV bound to: 2500 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'alu_top' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/alu_top.sv:1]
+	Parameter WIDTH_COUNTER_DEBOUNCE bound to: 24 - type: integer 
+	Parameter CLOCK_FREQ_DEBOUNCE bound to: 10000000 - type: integer 
+	Parameter STABLE_TIME_MS_DEBOUNCE bound to: 20 - type: integer 
+	Parameter WIDTH_COUNTER bound to: 8 - type: integer 
+	Parameter WIDTH_MUX bound to: 16 - type: integer 
+	Parameter STEP_COUNTER bound to: 1 - type: integer 
+	Parameter PERIOD_BIT_PWM bound to: 12 - type: integer 
+	Parameter DUTY_WIDTH_PWM bound to: 8 - type: integer 
+	Parameter DISPLAY_CLK_DIV bound to: 2500 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'debounce_sw' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/debounce_sw.sv:1]
+	Parameter WIDTH_COUNTER bound to: 24 - type: integer 
+	Parameter CLOCK_FREQ bound to: 10000000 - type: integer 
+	Parameter STABLE_TIME_MS bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce_sw' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/debounce_sw.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.runs/design_dsp_alu_top_wrapper_0_0_synth_1/.Xil/Vivado-18220-DESKTOP-8J48ADF/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.runs/design_dsp_alu_top_wrapper_0_0_synth_1/.Xil/Vivado-18220-DESKTOP-8J48ADF/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'counter_sw' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/counter_sw.sv:1]
+	Parameter WIDTH_COUNTER bound to: 8 - type: integer 
+	Parameter STEP bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter_sw' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/counter_sw.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/display.sv:23]
+	Parameter DISPLAY_CLK_DIV bound to: 2500 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/display.sv:122]
+INFO: [Synth 8-6157] synthesizing module 'bin_to_dec' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/bin_to_dec.sv:1]
+WARNING: [Synth 8-324] index -1 out of range [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/bin_to_dec.sv:86]
+WARNING: [Synth 8-324] index 3 out of range [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/bin_to_dec.sv:86]
+INFO: [Synth 8-6155] done synthesizing module 'bin_to_dec' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/bin_to_dec.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'driver' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/driver.sv:3]
+	Parameter CLK_DIV bound to: 2500 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'i2c_simple_master' [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/i2c_simple_master.sv:1]
+	Parameter CLOCK_DIVIDER bound to: 2500 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/i2c_simple_master.sv:113]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_simple_master' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/i2c_simple_master.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'driver' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/driver.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'display' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/display.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'alu_top' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/alu_top.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu_top_wrapper' (0#1) [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/alu_top_wrapper.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_dsp_alu_top_wrapper_0_0' (0#1) [c:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.gen/sources_1/bd/design_dsp/ip/design_dsp_alu_top_wrapper_0_0/synth/design_dsp_alu_top_wrapper_0_0.v:53]
+WARNING: [Synth 8-3936] Found unconnected internal register 'bcd_add3_reg[3]' and it is trimmed from '4' to '3' bits. [C:/Users/lilya/Documents/ds3_task/task_dsp/sources/rtl/bin_to_dec.sv:63]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1311.344 ; gain = 607.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1311.344 ; gain = 607.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1311.344 ; gain = 607.070
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1311.344 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'inst/alu_top_inst/clknetwork'
+Finished Parsing XDC File [c:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'inst/alu_top_inst/clknetwork'
+Parsing XDC File [C:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.runs/design_dsp_alu_top_wrapper_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.runs/design_dsp_alu_top_wrapper_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1370.895 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1370.895 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1370.895 ; gain = 666.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1370.895 ; gain = 666.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1370.895 ; gain = 666.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'fsm_state_ff_reg' in module 'bin_to_dec'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_simple_master'
+INFO: [Synth 8-802] inferred FSM for state register 'fsm_state_ff_reg' in module 'driver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                              000
+                 RUNNING |                              010 |                              001
+                    DONE |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fsm_state_ff_reg' using encoding 'one-hot' in module 'bin_to_dec'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                       0000000001 |                             0000
+              START_COND |                       0000000010 |                             0001
+            SEND_BIT_LOW |                       0000000100 |                             0010
+           SEND_BIT_HIGH |                       0000001000 |                             0011
+                 ACK_LOW |                       0000010000 |                             0100
+                ACK_HIGH |                       0000100000 |                             0101
+                STOP_LOW |                       0001000000 |                             0111
+               STOP_HIGH |                       0010000000 |                             1000
+              DONE_STATE |                       0100000000 |                             1001
+               NEXT_BYTE |                       1000000000 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'i2c_simple_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+      SEND_ADDR_MODE_CMD |                              001 |                              001
+    SEND_ADDR_AND_DIGITS |                              010 |                              010
+        SEND_DISPLAY_CMD |                              011 |                              011
+                    DONE |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fsm_state_ff_reg' using encoding 'sequential' in module 'driver'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1370.895 ; gain = 666.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 4     
+	   2 Input   16 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 3     
++---XORs : 
+	                2 Bit    Wide XORs := 10    
++---Registers : 
+	               25 Bit    Registers := 4     
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 15    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input   25 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 3     
+	  10 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 6     
+	   5 Input    8 Bit        Muxes := 5     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 8     
+	  10 Input    4 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 20    
+	  10 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 5     
+	  11 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 12    
+	   5 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1423.828 ; gain = 719.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1524.246 ; gain = 819.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1618.645 ; gain = 914.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1618.645 ; gain = 914.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |CARRY4  |   111|
+|3     |LUT1    |     9|
+|4     |LUT2    |    65|
+|5     |LUT3    |   153|
+|6     |LUT4    |   406|
+|7     |LUT5    |    71|
+|8     |LUT6    |   161|
+|9     |FDCE    |   532|
+|10    |FDPE    |    28|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 1785.668 ; gain = 1021.844
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1785.668 ; gain = 1081.395
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1788.090 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1791.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f19c0925
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1791.477 ; gain = 1276.406
+INFO: [Coretcl 2-1174] Renamed 19 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1791.477 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lilya/Documents/ds3_task/task_dsp/project/task_DSP.runs/design_dsp_alu_top_wrapper_0_0_synth_1/design_dsp_alu_top_wrapper_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_dsp_alu_top_wrapper_0_0_utilization_synth.rpt -pb design_dsp_alu_top_wrapper_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  3 14:33:07 2025...
